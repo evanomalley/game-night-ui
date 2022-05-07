@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { ThemeVars } from "../../../components/theme";
 import { ROUTE_URLS } from "../../../routes/RouteURLS";
@@ -44,8 +44,10 @@ const StyledMenuItem = styled.li`
     height: 100%;
     display: flex;
     align-items: center;
-    border-radius: 4px;
     padding-left: 16px;
+    &.active {
+      border-right: 5px solid ${ThemeVars.colors.button.primary};
+    }
   }
   span {
     margin-left: 16px;
@@ -70,10 +72,10 @@ const HomeSideBar = (props: HomeSideBarPropsType) => {
         {SideNavData.map((item, index) => {
           return (
             <StyledMenuItem key={index}>
-              <Link to={item.link}>
+              <NavLink to={item.link}>
                 {" "}
                 {item.icon} <span>{item.text}</span>
-              </Link>
+              </NavLink>
             </StyledMenuItem>
           );
         })}

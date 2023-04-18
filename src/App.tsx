@@ -9,7 +9,7 @@ import { RootPage } from "./pages/RootPage";
 import { useAuth } from "./hooks/UseAuth";
 import styled from "styled-components";
 import { DashBoard } from "./pages/home/Dashboard";
-import { MyGamesList } from "./pages/home/MyGames";
+import { MyGamesList } from "./pages/home/myGames/MyGames";
 
 const AppContainer = styled.div`
   height: 100%;
